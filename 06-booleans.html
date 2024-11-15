@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+      <style>
+        
+      </style>
+      
+  </head>
+  <body>
+    
+    <script>
+      console.log(typeof 'true'); 
+      console.log(typeof false);
+
+      console.log(3 < 4-5); //first it will do the math
+
+      console.log(5 === '5.00'); //=== used in JS
+      console.log(5 == '5.00'); //== not used in JS
+      console.log(5 !== '5.00'); //!== used in JS
+      console.log(5 != '5.00'); //!= not used in JS
+
+      const i = 17;
+      if(i>=18)
+        {
+          console.log('Can Drive')
+        }
+        else
+        {
+          console.log(`Can't Drive`)
+        }
+      
+
+      if(i>=18)
+        {
+          console.log('Can Drive')
+        }
+        else if(i>=16)
+        {
+          console.log('Almost there')
+        }  
+        else
+        {
+          console.log(`Can't Drive`)
+        }
+     
+
+      console.log(true&&true);    //true
+      console.log(true&&false);   //false
+      console.log(true||true);    //true
+      console.log(true||false);   //true
+      console.log(!true);         //false
+       
+      console.log(!0); //Falsy Value(false,0,'',NaN,undefined,null)
+      //example
+      i=1
+      if(i)
+        {
+          console.log('Cart have Items')
+        }
+        else
+        {
+          console.log('Cart is Empty')
+        }
+      console.log('text'/5);    //NaN
+      let variable1;       //can be empty only with let
+      console.log(variable1);   //undefined
+      
+      const result = true ? 'truthy':'falsy'  //shortcut for if statment
+      console.log(result);
+      const result1 = 0 ? 'truthy':'falsy'  
+      console.log(result1);
+
+      const message = 5 && console.log('hello');   //if statment shortcut 
+      const message1 = 0 && console.log('hello');  //&& operator
+
+      const currency = undefined || 'USD'; // OR operator 
+      console.log(currency);               //Default Operators
+    </script>
+  </body>
+</html>

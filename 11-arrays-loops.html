@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+      <style>
+        
+      </style>
+      
+  </head>
+  <body>
+
+    <script>
+       //array represts list of numbers
+      const myArray = [
+        10,   //index 0
+        20,  //index 1
+        30  //index 2
+      ]; 
+      console.log(myArray);
+
+      console.log(myArray[0]); //to get a particular value at a position (INDEX)
+
+      myArray[0] = 99;  // to update or change a value
+      console.log(myArray);
+
+      [1, 'hello', true, {name:'socks'},[1, 2]] //we can add any type of value
+
+      console.log(typeof [1, 2]);  //array is a object
+      console.log(Array.isArray([1,2]));  //true
+      console.log(myArray.length);   //3 (no. of values in array)
+
+      myArray.push(100);  // add value at the end of array  
+      console.log(myArray);   // [99,20,,30,100]
+      myArray.splice(0, 1);  //remove value (index, no. of values from index)
+      console.log(myArray); //[20,30,100]
+      
+      //LOOPS
+      //While Loop
+      let i = 1 ;  //varaiable
+      while(i <= 3) //while loop coniditon
+      {  
+        console.log(i);  //statement
+        i++;  //increment step
+      }
+      //FOR Loop
+      for(let i=1;i<=5;i++){
+        console.log(i);
+      }
+
+      //example of While
+      let randomNumber = 0;
+      while(randomNumber<0.5){
+        randomNumber=Math.random();
+      }
+     console.log(randomNumber);
+      //array with loops
+      const todoList= [ 
+        'make Dinner',
+        'wash dishes',
+        'watch youtube'
+      ]
+      for(let index=0; index<todoList.length;index++)
+      {
+        const value = todoList[index];
+        console.log(index);
+        console.log(value);
+      }
+
+      //ACCUMULATOR Pattern
+      //Array of numbers and add all numbers
+      const nums=[10,20,30];
+      let result=0;   //accumulator variable
+      for(let i =0; i<nums.length; i++)
+      {
+        const num = nums[i];
+        result=result+num;
+      }
+      console.log(result);
+     //to double the values of array 'nums'
+      let numsDoubled=[]; //accumulator variable
+     for(let i =0; i<nums.length; i++)
+      {
+        const num = nums[i];
+        numsDoubled.push(num*2);
+      }
+      console.log(numsDoubled); 
+
+      const array1=[1,2,3]; //saved in computer memry
+      const array2 = array1.slice(); //because of slice array 1 and 2 will take differnece referneces
+      console.log(array2); //if this is modiified it will change array 1 also as array saved in memory
+      array2.push(4);
+      console.log(array2);
+      console.log(array1);
+
+      const [firstValue, secondValue, thirdValue] = [1,2,3]; //destructring
+
+      for(let i = 1; i<=10; i++)
+      {
+        if(i===3){
+          continue; //it will skip the number 3
+        }
+        if(i%3===0){
+          continue;   //skip number divisible by 3
+        }
+        console.log(i);
+        if(i===8){
+          break;  //exit ro stop the loop
+        }
+      }
+
+      //skip number divisible by 3 in the loop
+      i =1;
+      while(i<=10){
+        if(i%3===0)
+        {
+          i++;
+          continue; //using continue we have to again set the incremental step
+        }
+        console.log(i);
+        i++;
+      }
+
+
+      //Loops with function
+      function doubleArray(nums1){
+          let numsDoubled1=[]; //accumulator variable
+          for(let i =0; i<nums1.length; i++)
+            {
+              const num = nums1[i];
+              if(num===0){   //if array contains 0 it breaks the loop
+                return numsDoubled1;
+              }
+              numsDoubled1.push(num*2);
+            }
+            return numsDoubled1; 
+        }
+        console.log(doubleArray([1,2,3]));
+        console.log(doubleArray([2,4,6,5,0,5]));
+
+    
+   </script>
+  </body>
+</html>

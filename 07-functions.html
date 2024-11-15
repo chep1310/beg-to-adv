@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Function</title>
+      <style>
+   
+      </style>
+      
+  </head>
+  <body>
+    
+    <script>
+      function function1(){  //cant use function cant start with number cant use speical characters except $ _
+        console.log('Hello');
+        console.log(2+2)
+      }
+
+      function1(); //executing/running the function
+      function1();
+      
+      function fun1(cost, taxPercent = 0.1) //parameter name cant use special words like function , cant start with number, cant use special charater except % or _.
+      //function can have many parameteres
+      {
+        console.log(cost*taxPercent)
+      }
+
+      fun1(1000,0.2); //call a function with a value
+      fun1(2000,0.2); //passing a value in function 
+      //also called arguments
+      fun1(1200); //if empty parameter value it will be undefined ( if default value is given it will execute that)
+
+
+    </script>
+  </body>
+</html>

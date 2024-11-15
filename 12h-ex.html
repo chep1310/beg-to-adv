@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <button class="add" onclick="add()">Add</button>
+    <button class="remove" onclick="remove()">Remove</button>
+      
+  </body>
+  <script>
+    
+    let numb = 1;
+    function remove(){
+      if(numb===0){
+        document.title=("App")
+      }else{
+        numb--;
+        interval();
+      };
+      
+    }
+    function add(){
+      if(numb>0)
+      {
+        numb++;
+        interval();
+      }
+      };
+    
+    function interval(){
+      setInterval(function(){
+      if(document.title==="App")
+      {
+        document.title=`New Message (${numb})`
+      }else{
+        document.title="App"
+      }
+      console.log(document.title);
+    },1000);
+    } 
+
+      //12j/k
+      const multiply = (a,b) =>{console.log(a*b);};
+      multiply(7,10);
+
+      //12l
+      const countPositive = (nums) =>{
+        let positiveNumber = 0;
+        nums.forEach((num) =>{//num is the value of array 
+                              //getting stores while running the code
+          if(num >0){
+            positiveNumber++;
+          }
+        });
+        return positiveNumber;
+      }
+      console.log(countPositive([1,2,-3,4]));
+
+      //12n
+      const removeEgg = (foods) => {
+        let eggRemoved = 0;
+        console.log(foods.filter((value, index) => {
+          if(value==="egg" && eggRemoved < 2){
+            eggRemoved++;
+            return false;
+          }else{
+            return true;
+          }
+        }));
+      };
+      removeEgg(['egg','apple','egg','ham','egg'])
+
+      //12m
+      const addNum = (array,num) =>{
+        console.log(array.map((value, index) => {
+          return value+num;
+        }));
+      };
+      addNum([1,2,3],2);
+     
+  </script>
+</html>

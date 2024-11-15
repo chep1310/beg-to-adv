@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>11 Excersize</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+
+    function removeEggs(foods){ 
+      const foodsCopy = foods.slice();
+      const reversedFoods = foods.reverse();
+      const result = [];
+      let eggRemoved=0;
+      for(let i = 0; i < reversedFoods.length; i++){
+        if(reversedFoods[i]==='egg' && eggRemoved < 2){
+          eggRemoved++;
+          continue;
+        }
+        result.push(reversedFoods[i]);
+      }
+      return result.reverse();
+    }
+    foods = ['egg','egg','egg','ham','apple'];
+    console.log(foods);
+    console.log(removeEggs(foods))
+  </script>
+</html>

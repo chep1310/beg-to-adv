@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+
+      <link rel="stylesheet" href="/css-styles/10-rps.css">
+      <!-- to link CSS to HTML -->
+
+  </head>
+  <body>
+        <p class="css-title">Rock Paper Scissors</p>
+
+        <button class="emoji-button" onclick=" 
+            playGame('Rock');     
+          ">
+          <img src="images/rock-emoji.png" class="emoji">
+          <!-- <p>Rock</p> -->
+        </button>
+
+        <button class="emoji-button" onclick="
+          playGame('Paper'); //calling and passing parameters
+          ">
+          <img src="images/paper-emoji.png" class="emoji">
+          <!-- <p>Paper</p> -->
+        </button>
+
+          <button class="emoji-button" onclick="
+            playGame('Scissors');
+          ">
+          <img src="images/scissors-emoji.png" class="emoji">
+          <!-- <p>Scissors</p> -->
+        </button>
+
+
+          <p class="js-result result"></p>
+          
+          <p class="js-moves moves">
+            <!-- You Move-
+            <img src ="images/rock-emoji.png"
+            class="emoji">
+            
+              | Computer Move- 
+              <img src ="images/scissors-emoji.png"  
+              class="emoji"> -->
+          </p>
+
+          <p class="js-score score"></p>
+
+          <button onclick="
+          score.wins=0;
+          score.ties=0;
+          score.lossess=0;
+          localStorage.removeItem('score');
+          updateScore();
+          " class="reset-score">
+            Reset Score
+          </button>
+
+
+    <script src="/js-scripts/10-rps.js"></script>
+    <!-- To link JS to HTML -->
+
+  </body>
+</html>

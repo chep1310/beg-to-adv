@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>11 Excersize</title>
+  </head>
+  <body>
+    <button class="js-button">
+      Start! 
+    </button>
+    <p>
+    <button class = "js-add">Add To Cart</button>
+    <div class="div-atc"></div>
+  </body>
+  <script>
+    //12a
+    let add = (function(){
+      console.log(2+3);
+    })
+    add();
+    add();
+
+    //12b
+    function runTwice(fun){
+      fun();
+      fun();
+    }
+    runTwice(function(){
+      console.log(12)
+    })
+    //12d
+    document.querySelector('.js-button').addEventListener('click',()=>{updateButton()});
+    function updateButton(){
+      let button  = document.querySelector('.js-button');
+      button.innerHTML=('..Loading');
+      setTimeout(function(){
+        button.innerHTML = 'Finished'
+      },1000);
+    }
+    //12e
+    let timeoutId;
+    document.querySelector('.js-add').addEventListener('click',()=>{
+      atcButton();
+    });
+    function atcButton(){
+      div=document.querySelector('.div-atc');
+      div.innerHTML=("Added");
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() =>
+      {
+        div.innerHTML=("");
+      },2000)
+    };
+
+
+    //12g
+    setInterval(function(){
+      let numb = 2;
+      if(document.title==="11 Excersize")
+      {
+        document.title=`New Message (${numb})`
+      }else{
+        document.title="11 Excersize"
+      }
+    },1000);
+    
+    //12h
+
+  </script>
+</html>

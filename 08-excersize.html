@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excersize</title>
+      <style>
+        
+      </style>
+      
+  </head>
+  <body>
+    
+    <script>
+      //8a
+      const product={
+        name: 'Basketball',
+        price: 2095+' cents'
+      };
+      console.log(product);
+      //8b
+      product.price= 2095+500+" cents";
+      console.log(product.price);
+      //8c
+      product[`delivery-time`] = 3+' days';  
+      console.log(product);
+      //8d
+      const pro1={
+        name: 'Ball',
+        price: 100
+      };
+      const pro2={
+        name: 'Ball',
+        price: 120
+      };
+
+      function comparePrice(){
+        if(pro1.price<pro2.price)
+      {
+        return pro1;  //return is used to return the value to function
+      }else 
+      {
+        return pro2;   //to return the value to the function
+      }
+      }
+      console.log(comparePrice());
+
+
+    //8e
+    function isSameProduct(){
+      if(pro1.name===pro2.name)
+    {
+      return true;
+    }else
+    {
+      return false;
+    }
+    }
+    console.log(isSameProduct());
+    //8f
+    console.log(pro1.name.toLowerCase());
+    console.log(pro1.name.toUpperCase());
+
+    //8g
+    console.log(pro1.name.repeat(5))  //to repeat a text/string
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+
+body{ /*if no specific so dont use '.'*/
+  background-color: rgb(0, 0, 0);
+  
+}
+.css-result{
+  color:white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.css-numbers{
+  background-color: grey;
+  border: none;
+  border-radius: 150px;
+  height:60px;
+  width:60px;
+  margin: 3px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  cursor:pointer;
+}
+.css-clear{
+  background-color: grey;
+  border: none;
+  border-radius: 150px;
+  height:60px;
+  width:60px;
+  margin: 3px;
+  font-size: 13px;
+  color: white;
+  cursor:pointer;
+}
+.css-cal{
+  background-color: rgb(255, 145, 0);
+  border: none;
+  border-radius: 150px;
+  height:60px;
+  width:60px;
+  margin: 3px 5px;
+  font-size: 25px;
+  color: white;
+  cursor:pointer;
+}

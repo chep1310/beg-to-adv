@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title> <!-- DOCUMENT OBJECT MODEL -->
+      <style>
+   
+      </style>
+      
+  </head>
+  <body>
+    
+    <button class="js-9a">
+      9A
+    </button>
+    <button class="js-9b">
+      9B
+    </button>
+    <p>
+      <!-- 9C -->
+    <button onclick="
+    document.querySelector('.js-coins').innerHTML=`You Chose: Heads`;
+      ">Heads</button>
+
+    <button onclick="
+    document.querySelector('.js-coins').innerHTML=`You Chose: Tails`;
+    ">Tails</button>
+
+    <p class="js-coins"></p>
+
+      <!-- 9D -->
+    <input placeholder="Name" class="js-name" onkeydown="
+    //console.log(event.key)
+    if(event.key === 'Enter')
+    {
+      submitButton()
+    }
+    ">
+    <button onclick="
+      submitButton()
+    ">Submit</button>
+    <p class = "js-text"></p>
+
+    <script>
+     //9a
+      console.log(document.querySelector('.js-9a').innerHTML);
+
+     //9b
+      document.querySelector('.js-9b').innerHTML='9B Done';
+
+      //9d,9e,9f
+      let A = document.querySelector('.js-name');
+      function submitButton(){
+        document.querySelector('.js-text').innerHTML=`Your Name is ${A.value}`;
+      }
+      
+  
+    </script>
+  </body>
+</html>

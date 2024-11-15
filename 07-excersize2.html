@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temp Conversion</title>
+      <style>
+        
+      </style>
+      
+  </head>
+  <body>
+    
+    <script>
+      //7d --- C to F 
+      function convertToF(C)
+      {
+        return `Fahrenheit= ${(C*9/5)+32}`;
+      }
+       //convertToF(25);
+
+      //7e --- F to C
+       function convertToC(F)
+      {
+       return `Celcius= ${(F-32)*5/9}`;
+      }
+      //convertToF(30);
+   
+      function convertTemperature(Num,Unit=""){
+        if(Unit==='F')
+          {
+            let result = convertToC(Num)
+            console.log(`${result}F`) ;
+          }
+          else if(Unit==='C')
+          {
+            result=convertToF(Num)
+            console.log(`${result}C`);
+          }
+       }
+      convertTemperature(25,'C');
+      convertTemperature(86,'F');
+      
+    </script>
+  </body>
+</html>

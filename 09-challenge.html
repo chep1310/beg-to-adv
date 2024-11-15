@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge Exercise</title> 
+      <style>
+   
+      </style>
+      
+  </head>
+  <body>
+      <!--Amazon Shipping Calculator-->
+      <p>Amazon Shipping Calculator</p>
+      <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+        enterKeydown(); 
+      " onkeyup="anyKeyup();">
+      <button onclick="
+        calTotal();
+      ">Calculate </button>
+
+      <p class="js-amount"></p>
+  
+    
+    <script>
+      //Amazon Shipping Calculator
+      function enterKeydown(){
+            //console.log(event.key)  //to get a keyboard pressed button
+            if(event.key==='Enter'){  //clicking enter makes the if statment true
+            calTotal();
+            }
+          }
+        function anyKeyup(){
+          if(event.key)
+        {
+          calTotal();
+        }
+        }
+
+      function calTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+        const cost= Number(inputElement.value*100); // to convert string to number
+        //console.log(cost);
+          if(cost<=4000){
+          document.querySelector('.js-amount').innerHTML=`Total Cost + Shipping = $${(cost+1000)/100}`;
+          }else if(cost>4000)
+          {
+            document.querySelector('.js-amount').innerHTML=`Total(Free Shipping) = $${cost/100}`;
+          }else {
+            document.querySelector('.js-amount').innerHTML=`Enter Valid Amount =  ${cost}`;
+          }
+      }
+    </script>
+  </body>
+</html>

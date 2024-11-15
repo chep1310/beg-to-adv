@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ex</title>
+      <style>
+        
+      </style>
+      
+  </head>
+  <body>
+
+    <script>
+     //11a
+     const nums=[10,20,30];
+     console.log(nums);
+     nums[2]=99;  //modify
+     console.log(nums);
+
+     //11b
+     getLastValue([1,2,5,6,8,9]);
+     let array=[];
+      function getLastValue(array){
+        let lastIndex = array.length-1;
+        let result=array[lastIndex];
+        console.log(result)
+      };
+
+      //11c
+      arraySwap([1,2,3,4,5]);
+      let arrays=[];
+      function arraySwap(arrays){
+        let lastIndex=arrays.length-1; //we could have done directly but one value would have lost in that case, so we put the index in one varaible and value of the first index in another and value of the last index in another, and assign it using the array[];  to update values
+        let firstValue= arrays[0];
+        let lastValue=arrays[lastIndex];
+      
+        arrays[0]=lastValue;
+        arrays[lastIndex]=firstValue;
+       
+        console.log(arrays);
+      };
+
+
+     //11d,11e,11f
+     //print even 0 to 10
+      for(let i=0; i<=10; i=i+2){
+         console.log(i);
+      };
+
+      let i=0;
+      while(i<=10)
+      {
+        console.log(i);
+        i=i+2;
+      };
+
+      //print 0 to 5
+      for(let i = 5; i >= 0; i--){
+        console.log(i);
+      };
+      
+      i=5;
+      while(i>=0){
+        console.log(i);
+        i--;
+      };
+     
+   </script>
+  </body>
+</html>

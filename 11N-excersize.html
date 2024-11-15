@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ex2</title>
+      <style>
+        
+      </style>
+      
+  </head>
+  <body>
+
+    <script>
+    //11n
+   
+    function countWords(words) {
+        const result = {};
+      
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          console.log(word);
+          if (!result[word]) {  //if result value is false
+            result[word]=1;  //it will print 1 
+          }else{
+            result[word]++; //if same value it will print the times it will go in the for loop
+          }
+        }
+        console.log(result);
+        return result;
+      }
+
+      console.log(countWords(['apple','apple','grape']));
+      console.log(countWords([1,1,1,1,1]));
+   </script>  
+  </body>
+</html>

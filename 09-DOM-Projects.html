@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title> <!-- DOCUMENT OBJECT MODEL -->
+      <style>
+   
+      </style>
+      
+  </head>
+  <body>
+<p>                <!--SUBSCRIBE BUTTON-->
+    Youtube Subscribe Button<p>
+      <button class="js-sub-button" onclick="
+        subscribe();
+        ">Subscribe
+        </button>
+    </p>
+
+                    <!--Amazon Shipping Calculator-->
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+     enterKeydown();
+    ">
+    <button onclick="
+      calTotal();
+    ">Calculate </button>
+    <p class="js-amount"></p>
+
+
+    <script>
+      String(25); //to convert number to string
+      console.log('25'-6); //25 converts to number automatically(Not Recommended)
+      console.log('25'+6); //this won't work 
+
+      window.alert;
+      window.document; // the whole window contain inside this object
+      window.console.log(); //build in object
+      //JS Addes Windows in every code
+      
+
+      //Amazon Shipping Calculator
+      function enterKeydown(){
+            console.log(event.key)  //to get a keyboard pressed button
+            if(event.key==='Enter'){  //clicking enter makes the if statment true
+            calTotal();
+            }
+          }
+
+      function calTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+        const cost= Number(inputElement.value); // to convert string to number
+          if(cost<=40){
+          document.querySelector('.js-amount').innerHTML=`Total = $${cost+10}`;
+          }else if(cost>40)
+          {
+            document.querySelector('.js-amount').innerHTML=`Total = $${cost}`;
+          }else {
+            document.querySelector('.js-amount').innerHTML=`Enter Valid Amount =  ${cost}`;
+          }
+      }
+      //SUBSCRIBE BUTTON
+     function subscribe(){
+      const buttonElement = document.querySelector('.js-sub-button');
+        if(buttonElement.innerHTML === 'Subscribe')
+        //if u want to get text with spaces and also it should be equal to the text so use  buttonElement.innerText === 'Subscribe'
+        {
+          buttonElement.innerHTML= 'Subscribed';
+        }else
+        {
+          buttonElement.innerHTML= 'Subscribe';
+        }
+     }
+      
+    </script>
+  </body>
+</html>

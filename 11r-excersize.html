@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>11 Excersize</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+
+    function removeEggs(foods){ 
+      const result = [];
+      for(let i = 0; i < foods.length; i++){
+        if(foods[i]==='egg'){
+          continue;
+        }
+        result.push(foods[i]);
+      }
+      return result;
+    }
+    console.log(removeEggs(['egg','ham','apple']));
+  </script>
+</html>

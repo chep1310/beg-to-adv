@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+      <style>
+    
+      </style>
+      
+  </head>
+  <body>
+      <button onclick="
+      cal= cal+'1';
+      console.log(cal);
+      ">
+        1
+      </button>
+
+      <button onclick="
+      cal= cal+'2';
+      console.log(cal);">
+        2
+      </button>
+
+      <button onclick="
+      cal= cal+'3';
+      console.log(cal);">
+        3
+      </button>
+
+      <p>
+      <button onclick="
+      cal+=' + ';
+      console.log(cal);
+      ">
+        +
+      </button>
+
+      <button onclick="
+      cal=eval(cal);
+      console.log(cal);
+      ">
+        =
+      </button>
+
+      <P>
+      <button onclick="
+      cal='';
+      console.log('Cleared');
+      ">
+       Reset
+      </button>
+
+    <script>
+       let cal = '';
+    </script>
+  </body>
+</html>

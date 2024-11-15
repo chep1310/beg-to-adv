@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10H</title> <!-- DOCUMENT OBJECT MODEL -->
+      <style>
+        body {
+          font-family : Arial;
+          
+        }
+        .css-is-sub {
+          background-color: lightgray ;
+          border: none;
+          color: black;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-right: 15px;
+          padding-left: 15px;
+          font-weight: bold;
+          border-radius: 50px;
+          cursor: pointer;
+          margin-bottom: 30px;
+        }
+        
+        .css-cost-input {
+          font-size: 15px;
+          /* padding-top: 10px;
+          padding-bottom: 10px;
+          padding-right: 10px;
+          padding-left: 10px; */
+          padding: 10px;
+        }
+
+        .css-cal {
+          background-color: green ;
+          border: none;
+          font-size: 15px;
+          color: white;
+          padding: 12px 15px;   /*vertical padding and horizontal*/
+          cursor: pointer;
+        }
+        .css-error{
+          color: red;
+        }
+      </style>
+      
+  </head>
+  <body>
+
+                    <!--Amazon Shipping Calculator-->
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of Order" class="js-cost-input css-cost-input" onkeydown="
+     enterKeydown();
+    ">
+    <button class="css-cal" onclick="
+      calTotal();
+    ">Calculate </button>
+    <p class="js-amount"></p>
+    <p class="js-error css-error"></p>
+
+    <script>
+      String(25); //to convert number to string
+      console.log('25'-6); //25 converts to number automatically(Not Recommended)
+      console.log('25'+6); //this won't work 
+
+      window.alert;
+      window.document; // the whole window contain inside this object
+      window.console.log(); //build in object
+      //JS Addes Windows in every code
+      
+
+      //Amazon Shipping Calculator
+      function enterKeydown(){
+            //console.log(event.key)  //to get a keyboard pressed button
+            if(event.key==='Enter'){  //clicking enter makes the if statment true
+            calTotal();
+            }
+          }
+
+      function calTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+        const cost= Number(inputElement.value);
+        // to convert string to number
+          document.querySelector('.js-error').
+           innerHTML=''; 
+           document.querySelector('.js-amount').
+           innerHTML='';
+          
+        
+          if(cost <= -1){
+           document.querySelector('.js-error').
+           innerHTML=`Error: cost cannot be less than 0$`; 
+           document.querySelector('.js-amount').
+           innerHTML=`Error`;
+          }else if(cost<=40)
+          {
+          document.querySelector('.js-amount').innerHTML=`Total = $${cost+10}`;
+          }else if(cost>40)
+          {
+            document.querySelector('.js-amount').innerHTML=`Total = $${cost}`;
+          } else {
+            document.querySelector('.js-amount').innerHTML=`Enter Valid Amount(Only Numbers) =  ${cost}`;
+        }
+      }
+
+       
+     
+    </script>
+  </body>
+</html>

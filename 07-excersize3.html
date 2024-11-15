@@ -1,0 +1,66 @@
+
+      <!DOCTYPE html>
+<html>
+  <head>
+    <title>Length Conversion</title>
+      <style>
+        
+      </style>
+      
+  </head>
+  <body>
+    
+    <script>
+     
+     function convertLen(len,from,to)
+      {
+        if (from !== 'km' && from !== 'miles' && from !== 'ft') 
+        {
+          console.log(`Invalid unit: ${from}`)
+        }else if(to !== 'km' && to !== 'miles' && to !== 'ft')
+        {
+          console.log(`Invalid unit: ${to}`)
+        }
+
+        if(from=='miles' && to=='km')
+          {
+            let result = len*1.6;
+            console.log(`${result}`);
+          }else if(from=='km' && to=='miles')
+          {
+            let result = len/1.6;
+            console.log(`${result}`);
+          }else if(from=='km' && to=='ft')
+          {
+              let result = len*3281;
+              console.log(`${result}`);
+          }
+          else if(from=='ft' && to=='km')
+          {
+              let result = len/3281;
+              console.log(`${result}`);
+          }else if(from=='miles' && to=='ft')
+          {
+              let result = len*5280;
+              console.log(`${result}`);
+          }
+          else if(from=='ft' && to=='miles')
+          {
+              let result = len/5280;
+              console.log(`${result}`);
+          }else if(from===to)
+          {
+            console.log(len,to)
+          }
+          
+      } 
+      convertLen(50, 'miles', 'km')
+      convertLen(32, 'km', 'miles') 
+      convertLen(50, 'km', 'km')
+      convertLen(5, 'miles', 'km') 
+      convertLen(5, 'miles', 'ft')
+      convertLen(5, 'km', 'ft') 
+      convertLen(5,'lbs','lbs')
+    </script>
+  </body>
+</html>

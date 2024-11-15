@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects
+    </title>
+      <style>
+   
+      </style>
+      
+  </head>
+  <body>
+    
+    <script>
+    const product = {   //to create a object
+      name: 'socks',    //can add multiple property with values
+      price: 1090   //called as ---- property: value pair
+    };
+    console.log(product);  //to print the properties of object
+    console.log(product.name);  //to print object's single property
+    console.log(product.price); //dot notation
+
+    product.name='cotton socks'; //to edit object property value
+    console.log(product.name);  //to print new value
+
+    //to add new property value pair in object
+    product.newProperty = true;
+    console.log(product);
+
+    //to delete a property from an object
+    delete product.newProperty;
+    console.log(product);
+    console.log(typeof product);  //object
+
+    //why use objects--- code organised, to group realted values
+    //use and group multiple values
+
+    const product2={
+      name:'shirt',
+      ['delivery-time']: 50,  //or 'delivery-time': 50
+          rating:{   //nested objects
+            stars: 4.5,
+            count: 87
+          },
+          fun: function function1(){    //function inside object
+            console.log('Function inside objects') //called as method
+          }
+    };
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']); //bracket notation-----
+    //let us use property in a object which dont work with dot notation
+    //for example
+    console.log(product2['delivery-time']) //it doesnot run because JS thinking '-' is charater not a full property or object name.
+    console.log(product2.rating);
+    console.log(product2.rating.stars);
+    product2.fun();
+
+    console.log(typeof console);
+    console.log(typeof console.log); //it is a method
+    //console is a object provided by JS
+
+    /*JSON = JavaScript Object Notation
+    JSON is Universal
+    JSON is used to store data
+    JSON is used to send data as it is readable to many langugages
+    JSON only works with ""  and cant understand ''
+
+
+    JSON Build in Objects----
+    to convert JavaScript Object to JSON vvvvvvv"solution"vvvvvvvv
+    */
+    console.log(JSON.stringify(product2)); //display according to JSON SYNTAX
+    console.log(typeof JSON.stringify(product2));
+
+    //Convert JSON to JavaScript Objects again
+    //JSON.parse()  method is used    vvvvvvSOLUTIONvvvvv
+    console.log(JSON.parse(JSON.stringify(product2)));
+    //create a variable to store JSON file
+
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
+    //LOCAL STORAGE
+    //to save values permenantly
+    
+
+    console.log('hello'.length);   //to get length of string
+
+    console.log('hello'.toUpperCase()); 
+    console.log('hello'.toLowerCase());
+
+    //Oject are references
+
+    const obj1 = {
+      message: 'hello'  
+    };
+
+    const obj2=obj1;   //makes efficent
+
+    obj1.message = 'goodjob'   //having const object we can change the value of the properties but not the properties.
+    console.log(obj1);  
+    console.log(obj2);
+
+    //we cant compare objects
+
+    const obj3={
+      message:'goodjob'
+    };
+
+    console.log(obj3===obj1);  //false
+    console.log(obj2===obj1);  //because it points to the same referce "message" soo it is true
+
+    const obj4={
+      message:'goodjob',
+      price: 799 
+    };
+
+    //const message= obj4.message;    destructing
+    
+    const{message, price} = obj4;  //do same as above 
+    console.log(message);
+    console.log(price);
+
+    const obj5={
+      //message:message
+      message,   //shortcut
+      method: function fun1(){
+        console.log('method')
+      }
+    };
+
+    console.log(obj5);
+    obj5.method();
+    </script>
+  </body>
+</html>

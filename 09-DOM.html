@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title> <!-- DOCUMENT OBJECT MODEL -->
+      <style>
+   
+      </style>
+      
+  </head>
+  <body>
+    <button>
+      HELLO
+    </button>
+     <!-- to differntiate between buttons-->
+      <button class="js-button"> 
+      Hello1
+    </button>
+    
+    <script>
+      /*console.log(document.title);
+      document.title='Changed'
+      console.log(document.body);
+      console.log(typeof document.body);
+      console.log(document.body.innerHTML);
+      document.body.innerHTML='<button>Good Job</button>';
+
+      document.body.innerHTML='Hello';    //dot notation
+      document.title = 'Good Job';
+*/
+      console.log(document.querySelector('button').innerHTML);  //get any element from page and get it from HTML to JS
+
+      document.querySelector('button').innerHTML='Changed';    //to change button from JS.
+      console.log(document.querySelector('.js-button'));
+      let buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement.innerHTML);
+      
+    </script>
+  </body>
+</html>
